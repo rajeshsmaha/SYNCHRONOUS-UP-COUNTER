@@ -1,16 +1,18 @@
-### SYNCHRONOUS-UP-COUNTER
+# SYNCHRONOUS-UP-COUNTER
+## DEVELOPED BY: MOPURI ANKITHA
+## REGISTER NUMBER: 212223040117
 
-**AIM:**
+## AIM:
 
 To implement 4 bit synchronous up counter and validate functionality.
 
-**SOFTWARE REQUIRED:**
+## SOFTWARE REQUIRED:
 
 Quartus prime
 
-**THEORY**
+## THEORY:
 
-**4 bit synchronous UP Counter**
+## 4 bit synchronous UP Counter:
 
 If we enable each J-K flip-flop to toggle based on whether or not all preceding flip-flop outputs (Q) are “high,” we can obtain the same counting sequence as the asynchronous circuit without the ripple effect, since each flip-flop in this circuit will be clocked at exactly the same time:
 
@@ -26,10 +28,9 @@ Since the first (LSB) flip-flop needs to toggle at every clock pulse, its J and 
 The next flip-flop need only “recognize” that the first flip-flop’s Q output is high to be made ready to toggle, so no AND gate is needed.
 However, the remaining flip-flops should be made ready to toggle only when all lower-order output bits are “high,” thus the need for AND gates.
 
-**Procedure**
+## Procedure:
 
-/* write all the steps invloved */
-
+```
 1.Initialize the shift register to a known state (e.g., all zeros).
 
 2.Input a bit serially into the shift register.
@@ -39,17 +40,13 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 4.Output the shifted bit from the last stage of the register.
 
 5.Repeat steps 2-4 for each bit you want to input and shift.
-
-**PROGRAM**
-
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
-
-Developed by: MOPURI ANKITHA
-
-RegisterNumber: 212223040117
-*/
 ```
-module ex11(out,clk,rstn);
+
+## PROGRAM:
+ Program for flipflops and verify its truth table in quartus using Verilog programming. 
+
+```
+module exp11(out,clk,rstn);
 input clk,rstn;
 output reg [3:0]out;
 always @ (posedge clk)
@@ -61,19 +58,16 @@ begin
 end
 endmodule
 ```
-**RTL LOGIC UP COUNTER**
+## RTL LOGIC UP COUNTER:
+![325559752-6766a5b3-e8be-425b-8991-9c1564ec02fb](https://github.com/Keerthana-VJ/SYNCHRONOUS-UP-COUNTER/assets/149347704/04e3c990-074d-4ae5-99d7-5c2b79b4bc3e)
 
-![image](https://github.com/user-attachments/assets/92cf9987-4053-442c-825a-e6354ce9a98c)
+## TIMING DIAGRAM FOR IP COUNTER:
 
-**TIMING DIAGRAM FOR IP COUNTER**
+![325559934-ab6c6174-1052-4905-a271-09797eae8c39](https://github.com/Keerthana-VJ/SYNCHRONOUS-UP-COUNTER/assets/149347704/128de7b7-6e57-42d8-a27e-34600aa0275c)
 
-![image](https://github.com/user-attachments/assets/625247f5-bdd3-4de6-9e8e-0831d5c3f3f4)
+## TRUTH TABLE:
+![325559984-e3f2a515-5eb9-4e89-b1a3-e7f134578777](https://github.com/Keerthana-VJ/SYNCHRONOUS-UP-COUNTER/assets/149347704/b75ef146-b4c8-4718-87fa-c3d60f2c4dce)
 
 
-**TRUTH TABLE**
-
-![image](https://github.com/user-attachments/assets/6bdd29be-cd29-42f5-b344-5ad42d4bed93)
-
-**RESULTS**
-
+## RESULTS:
 Hence a 4 bit synchronous up counter is implemented correctly
